@@ -1,6 +1,6 @@
 ## Selenium on Kubernetes
 
-Selenium is a browser automation tool used primarily for testing web applications. However when Selenium is used in a CI pipeline to test applications, there is often contention around the use of Selenium resources. This example shows you how to deploy Selenium to Kubernetes in a scalable fashion.
+Selenium Grid allows the execution of WebDriver scripts on remote machines (virtual or real) by routing commands sent by the client to remote browser instances. It aims to provide an easy way to run tests in parallel on multiple machines. This example shows you how to deploy Selenium to Kubernetes in a scalable fashion.
 
 ## Architecture:
 
