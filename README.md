@@ -3,8 +3,6 @@
 Selenium is a browser automation tool used primarily for testing web applications. However when Selenium is used in a CI pipeline to test applications, there is often contention around the use of Selenium resources. This example shows you how to deploy Selenium to Kubernetes in a scalable fashion.
 
 ## Architecture:
-
-
                                           |-----------> Selenium Node 1----->|
                                           |                                  |
                                           |-----------> Selenium Node 2----->| 
@@ -13,7 +11,11 @@ Torture---------->Selenium Hub----------->|-----------> Selenium Node3------>|--
                                           |                                  |  
                                           |-----------> Selenium Node 5----->|   
                                           |                                  | 
-                                          |-----------> Selenium Node N----->|   
+                                          |-----------> Selenium Node N----->|
+                                          
+                                          
+                                          
+                                          
 
 
 ### Jitsi meet torture  
