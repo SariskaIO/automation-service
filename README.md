@@ -94,63 +94,6 @@ Once the pods start, you will see them show up in the Selenium Hub interface.
 
 Let's run a quick Selenium job to validate our setup.
 
-#### Setup Python Environment
-
-First, we need to start a python container that we can attach to, then get inside this container.
-
-```console
-kubectl run selenium-python --tty -i --image=python:slim bash
-```
-
-Once inside, we need to install the Selenium library
-
-```console
-pip install selenium
-```
-
-#### Run Selenium Job with Python
-
-We're all set up, start the python interpreter.
-
-```console
-python
-```
-
-And paste in the contents of selenium-test.py.
-
-```python
-from selenium import webdriver
-
-def check_browser(browser):
-  if browser == "CHROME":
-    options = webdriver.ChromeOptions()
-  elif browser == "FIREFOX":
-    options = webdriver.FirefoxOptions()
-  driver = webdriver.Remote(
-    command_executor='http://selenium-hub:4444/wd/hub',
-    options=options
-  )
-  driver.get("http://www.google.com")
-  assert "google" in driver.page_source
-  driver.quit()
-  print("Browser %s checks out!" % browser)
-
-
-check_browser("FIREFOX")
-check_browser("CHROME")
-```
-
-You should get
-
-```
->>> check_browser("FIREFOX")
-Browser FIREFOX checks out!
->>> check_browser("CHROME")
-Browser CHROME checks out!
-```
-
-Congratulations, your Selenium Hub is up, with Firefox and Chrome nodes!
-
 ### Scale your Firefox and Chrome nodes.
 
 If you need more Firefox or Chrome nodes, your hardware is the limit:
@@ -184,7 +127,6 @@ To remove all created resources, run the following:
 kubectl delete deployment selenium-hub
 kubectl delete deployment selenium-node-chrome
 kubectl delete deployment selenium-node-firefox
-kubectl delete deployment selenium-python
 kubectl delete svc selenium-hub
 ```
 

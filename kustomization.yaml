@@ -1,0 +1,6 @@
+resources:
+  - jitsi-meet-torture-deployment.yaml
+  - selenium-hub-deployment.yaml
+  - selenium-node-chrome-deployment.yaml
+  - selenium-node-firefox-deployment.yaml
+  - selenium-hub-svc.yaml
