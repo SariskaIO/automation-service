@@ -38,6 +38,7 @@ Node is a remote device that consists of a native OS and a remote WebDriver. It 
   
 ## To Run Test:
 
+```
 mvn
 -Dthreadcount=1
 -Dorg.jitsi.malleus.conferences=3
@@ -52,3 +53,4 @@ mvn
 -Djitsi-meet.instance.url=“https://meet.sariska.io”
 -Djitsi-meet.isRemote=true
 test
+```
