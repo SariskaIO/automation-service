@@ -37,7 +37,20 @@ Node is a remote device that consists of a native OS and a remote WebDriver. It 
 
   
 ## To Run Test:
+ssh to hub
 
+using kubect:
+  
+  kubectl exec -it <pod-name> -n <namespace> -- bash
+
+or
+
+direct: 
+ ssh pod_ip 
+
+
+and then run test with desired config  
+  
 ```
 mvn
 -Dthreadcount=1
