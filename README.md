@@ -5,15 +5,15 @@ Selenium is a browser automation tool used primarily for testing web application
 ## Architecture:
 
 
-                                                     |----------- Selenium Node 1------>|
-                                                     |                                  |
-                                                     |----------- Selenium Node 2------>| 
-                                  
-    Jitsi meet torture---------->Selenium Hub------->|----------- Selenium Node 3-------|------>Sariska Meet 
-                                                     |                                  |  
-                                                     |----------- Selenium Node 4-------|   
-                                                     |                                  | 
-                                                     |----------- Selenium Node 4-------|   
+                                          |----------- Selenium Node 1------>|
+                                          |                                  |
+                                          |----------- Selenium Node 2------>| 
+                                          |                                  |
+Torture---------->Selenium Hub------->Selenium Node 3--------------------------------->Sariska Meet 
+                                          |                                  |  
+                                          |----------- Selenium Node 4-------|   
+                                          |                                  | 
+                                          |----------- Selenium Node 4-------|   
 
 
 ### Jitsi meet torture  
