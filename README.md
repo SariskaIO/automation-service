@@ -1,8 +1,8 @@
-## Selenium on Kubernetes
+### Selenium on Kubernetes
 
 Selenium Grid allows the execution of WebDriver scripts on remote machines (virtual or real) by routing commands sent by the client to remote browser instances. It aims to provide an easy way to run tests in parallel on multiple machines. This example shows you how to deploy Selenium to Kubernetes in a scalable fashion.
 
-## Architecture:
+### Architecture:
 
 ```
                                           |-----------> Selenium Node 1----->|
@@ -32,11 +32,11 @@ Hub is a server that accepts the access requests from the WebDriver client, rout
 
 Node is a remote device that consists of a native OS and a remote WebDriver. It receives requests from the hub in the form of JSON test commands and executes them using WebDriver
 
-## To access selenium hude console
+### To access selenium hude console
  http:<NODE_IP>:30001/hub/console
 
   
-## To Run Test:
+### To Run Test:
 ssh to hub
 
 ### Using Kubect
