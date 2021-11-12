@@ -12,6 +12,8 @@ spec:
       labels:
         app: selenium-node-chrome
     spec:
+      nodeSelector:
+        alpha.eksctl.io/nodegroup-name: "managed-ng-automation" 
       containers:
         - name: selenium-node-chrome
           image: selenium/node-chrome

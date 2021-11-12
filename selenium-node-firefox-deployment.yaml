@@ -12,6 +12,8 @@ spec:
       labels:
         app: selenium-node-firefox
     spec:
+      nodeSelector:
+        alpha.eksctl.io/nodegroup-name: "managed-ng-automation" 
       containers:
         - name: selenium-node-firefox
           image: selenium/node-firefox

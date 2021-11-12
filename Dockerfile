@@ -2,29 +2,32 @@ FROM ubuntu:18.04
 
 # This script sets up the virtual machine image that will then be frozen into a snapshot
 
-sudo apt-get update
+RUN apt-get update
 
 # Install docker, see https://docs.docker.com/engine/install/ubuntu/
-sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg-agent \
-    software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository \
+
+RUN apt-get install apt-transport-https -y
+RUN apt-get install ca-certificates -y
+RUN apt-get install curl -y 
+RUN apt-get install gnupg-agent -y
+RUN apt-get install software-properties-common -y
+RUN apt-get install git -y
+RUN apt-get install wget -y
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+
+RUN add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
 
 # Install maven
-sudo apt install maven -y
+RUN apt install maven -y
 
 # Clone the jitsi-torture-repository
-git clone https://github.com/jitsi/jitsi-meet-torture
+RUN git clone https://github.com/jitsi/jitsi-meet-torture
 
 # Download the test video
-wget -O jitsi-meet-torture/resources/FourPeople_1280x720_30.y4m https://media.xiph.org/video/derf/y4m/FourPeople_1280x720_60.y4m
+RUN wget -O jitsi-meet-torture/resources/FourPeople_1280x720_30.y4m https://media.xiph.org/video/derf/y4m/FourPeople_1280x720_60.y4m
 
 # Get docker-compose file
-wget -O jitsi-meet-torture/docker-compose.yml https://raw.githubusercontent.com/schul-cloud/jitsi-deployment/develop/loadtest/docker-compose.yml
+RUN wget -O jitsi-meet-torture/docker-compose.yml https://raw.githubusercontent.com/schul-cloud/jitsi-deployment/develop/loadtest/docker-compose.yml

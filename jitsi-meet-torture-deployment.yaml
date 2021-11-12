@@ -16,6 +16,8 @@ spec:
       labels:
         app: jitsi-meet-torture
     spec:
+      nodeSelector:
+        alpha.eksctl.io/nodegroup-name: "managed-ng-automation" 
       containers:
       - name: jitsi-meet-torture
         image: 718762496685.dkr.ecr.ap-south-1.amazonaws.com/sariska/automation-service:latest 

@@ -16,6 +16,8 @@ spec:
       labels:
         app: selenium-hub
     spec:
+      nodeSelector:
+        alpha.eksctl.io/nodegroup-name: "managed-ng-automation" 
       containers:
       - name: selenium-hub
         image: selenium/hub:3.141.59-20200515
