@@ -9,7 +9,7 @@ Selenium is a browser automation tool used primarily for testing web application
                                           |                                  |
                                           |-----------> Selenium Node 2----->| 
                                           |                                  |
-Torture---------->Selenium Hub------------------------> Selenium Node 3------|--------->Sariska Meet 
+Torture---------->Selenium Hub----------->|-----------> Selenium Node3------>|--------->Sariska Meet 
                                           |                                  |  
                                           |-----------> Selenium Node 5----->|   
                                           |                                  | 
