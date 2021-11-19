@@ -1,5 +1,5 @@
 resources:
-  - jitsi-meet-torture-deployment.yaml
+  - torture-deployment.yaml
   - selenium-hub-deployment.yaml
   - selenium-node-chrome-deployment.yaml
   - selenium-node-firefox-deployment.yaml

@@ -1,11 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jitsi-meet-torture
+  name: torture
+  namespace: automation
 spec:
   selector:
     matchLabels:
-      app: jitsi-meet-torture
+      app: torture
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -14,14 +15,14 @@ spec:
   template:
     metadata:
       labels:
-        app: jitsi-meet-torture
+        app: torture
     spec:
       nodeSelector:
         alpha.eksctl.io/nodegroup-name: "managed-ng-automation" 
       containers:
-      - name: jitsi-meet-torture
+      - name: torture
         image: 718762496685.dkr.ecr.ap-south-1.amazonaws.com/sariska/automation-service:latest 
         resources:
           limits:
-            memory: "200Mi"
-            cpu: "200m"
+            memory: "1000Mi"
+            cpu: "1000m"

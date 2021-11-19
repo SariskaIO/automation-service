@@ -4,8 +4,6 @@ FROM ubuntu:18.04
 
 RUN apt-get update
 
-# Install docker, see https://docs.docker.com/engine/install/ubuntu/
-
 RUN apt-get install apt-transport-https -y
 RUN apt-get install ca-certificates -y
 RUN apt-get install curl -y 
@@ -13,12 +11,6 @@ RUN apt-get install gnupg-agent -y
 RUN apt-get install software-properties-common -y
 RUN apt-get install git -y
 RUN apt-get install wget -y
-RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-
-RUN add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
 
 # Install maven
 RUN apt install maven -y
@@ -28,6 +20,3 @@ RUN git clone https://github.com/jitsi/jitsi-meet-torture
 
 # Download the test video
 RUN wget -O jitsi-meet-torture/resources/FourPeople_1280x720_30.y4m https://media.xiph.org/video/derf/y4m/FourPeople_1280x720_60.y4m
-
-# Get docker-compose file
-RUN wget -O jitsi-meet-torture/docker-compose.yml https://raw.githubusercontent.com/schul-cloud/jitsi-deployment/develop/loadtest/docker-compose.yml
