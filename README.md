@@ -32,7 +32,7 @@ Hub is a server that accepts the access requests from the WebDriver client, rout
 
 Node is a remote device that consists of a native OS and a remote WebDriver. It receives requests from the hub in the form of JSON test commands and executes them using WebDriver
 
-### To access selenium hude console
+### To access selenium hub console
  http:<NODE_IP>:30001/hub/console
 
   
