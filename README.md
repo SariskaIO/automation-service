@@ -36,8 +36,10 @@ Node is a remote device that consists of a native OS and a remote WebDriver. It 
  http:<NODE_IP>:30001/hub/console
 
   
-### To Run Test:
-ssh to hub
+### How To Run Test:
+
+
+ssh to torture
 
 ### Using Kubect
 
