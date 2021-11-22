@@ -22,7 +22,7 @@ Torture---------->Selenium Hub----------->|-----------> Selenium Node3------>|--
 
 ### Jitsi meet torture  
 
-meet meet torture contains all unit tests written in java selenium as well resouces to replicate fake videos.
+meet meet torture contains all unit tests written in java selenium as well resources to replicate fake videos.
 
 ### Selenium Hub
 
