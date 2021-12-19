@@ -19,9 +19,15 @@ spec:
         - name: selenium-node-chrome
           image: selenium/node-chrome
           ports:
-            - containerPort: 5900
+            - containerPort: 5555
           env:
            - name:  HUB_HOST
              value: "selenium-srv" 
            - name: HUB_PORT
              value: "4444"
+           - name: SE_EVENT_BUS_HOST
+             value: "selenium-srv"
+           - name: SE_EVENT_BUS_PUBLISH_PORT
+             value: "4442"
+           - name: SE_EVENT_BUS_SUBSCRIBE_PORT
+             value: "4443"
