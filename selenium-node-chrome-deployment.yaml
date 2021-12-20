@@ -17,7 +17,7 @@ spec:
         alpha.eksctl.io/nodegroup-name: "managed-ng-automation" 
       containers:
         - name: selenium-node-chrome
-          image: selenium/node-chrome
+          image: selenium/node-chrome:3.141.59-20200409
           ports:
             - containerPort: 5555
           env:
@@ -31,3 +31,5 @@ spec:
              value: "4442"
            - name: SE_EVENT_BUS_SUBSCRIBE_PORT
              value: "4443"
+           - name: JAVA_OPTS
+             value: "-Dwebdriver.chrome.whitelistedIps="

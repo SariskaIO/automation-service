@@ -9,5 +9,14 @@ spec:
   ports:
   - port: 4444
     nodePort: 30001
+    name: service
+  - name: subscribe
+    targetPort: 4443
+    port: 4443
+    protocol: TCP
+  - name: publish
+    targetPort: 4442
+    port: 4442
+    protocol: TCP
   type: NodePort
   sessionAffinity: None

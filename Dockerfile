@@ -16,7 +16,13 @@ RUN apt-get install wget -y
 RUN apt install maven -y
 
 # Clone the jitsi-torture-repository
-RUN git clone https://github.com/jitsi/jitsi-meet-torture
+# RUN git clone https://github.com/jitsi/jitsi-meet-torture
+
+RUN git  clone https://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@github.com/SariskaIO/jitsi-meet-torture.git
 
 # Download the test video
 RUN wget -O jitsi-meet-torture/resources/FourPeople_1280x720_30.y4m https://media.xiph.org/video/derf/y4m/FourPeople_1280x720_60.y4m
+
+COPY ./init.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/init.sh
+CMD ["/usr/local/bin/init.sh"]
