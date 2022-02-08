@@ -4,7 +4,7 @@ metadata:
   name: selenium-node-firefox-rep
   namespace: automation
 spec:  
-  replicas: 3
+  replicas: 0
   selector:
     app: selenium-node-firefox
   template:

@@ -13,10 +13,10 @@ cd jitsi-meet-torture
 # # make sure it is executable
 # sudo chmod +x /usr/bin/chromedriver
 
-# sudo cp chromedriver /usr/bin/chromedriver 
+# sudo cp -r chromedriver*/* /usr/bin/chromedriver 
 # sudo chown root:root /usr/bin/chromedriver 
 # sudo chmod +x /usr/bin/chromedriver 
 
-./scripts/malleus.sh --use-load-test=false --conferences=1 --participants=2 --senders=2 --audio-senders=2 --duration=90 --room-name-prefix=hamertesting --hub-url=http://selenium-srv:4444/wd/hub --instance-url=https://meet.sariska.io/ --debug=true
+./scripts/malleus.sh --use-load-test=true --conferences=1 --participants=20 --senders=20 --audio-senders=20 --duration=360 --room-name-prefix=bloom9 --hub-url=http://selenium-srv:4444/wd/hub --instance-url=https://meet.sariska.io/ --debug=true
 
 echo testing complete

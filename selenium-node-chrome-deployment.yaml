@@ -4,7 +4,7 @@ metadata:
   name: selenium-node-chrome-rep
   namespace: automation
 spec:  
-  replicas: 3
+  replicas: 2
   selector:
     app: selenium-node-chrome
   template:
@@ -15,9 +15,15 @@ spec:
     spec:
       nodeSelector:
         alpha.eksctl.io/nodegroup-name: "managed-ng-automation" 
+
+    
       containers:
         - name: selenium-node-chrome
-          image: selenium/node-chrome:3.141.59-20200409
+          image: selenium/node-chrome:3.141.59-20210929
+          resources:
+            limits:
+              memory: "2Gi"
+          # command: ['sh', '-c', 'sudo mkdir resources; sudo wget -O resources/FourPeople_1280x720_60.y4m https://media.xiph.org/video/derf/y4m/FourPeople_1280x720_60.y4m; while true; do sleep 30; done;']
           ports:
             - containerPort: 5555
           env:
