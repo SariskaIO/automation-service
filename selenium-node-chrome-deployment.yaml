@@ -4,7 +4,7 @@ metadata:
   name: selenium-node-chrome-rep
   namespace: automation
 spec:  
-  replicas: 2
+  replicas: 0
   selector:
     app: selenium-node-chrome
   template:
