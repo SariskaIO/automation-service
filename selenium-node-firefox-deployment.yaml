@@ -25,3 +25,18 @@ spec:
              value: "selenium-srv" 
            - name: HUB_PORT
              value: "4444"
+           - name: SE_EVENT_BUS_HOST
+             value: "selenium-srv"
+           - name: SE_EVENT_BUS_PUBLISH_PORT
+             value: "4442"
+           - name: SE_EVENT_BUS_SUBSCRIBE_PORT
+             value: "4443"
+           - name: JAVA_OPTS
+             value: "-Dwebdriver.chrome.whitelistedIps="
+          volumeMounts:
+            - name: automation-pvc
+              mountPath: /usr/share/jitsi-meet-torture/resources
+      volumes:
+        - name: automation-pvc
+          persistentVolumeClaim:
+          claimName: asset-pvc

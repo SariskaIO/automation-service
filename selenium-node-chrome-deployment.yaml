@@ -15,8 +15,6 @@ spec:
     spec:
       nodeSelector:
         alpha.eksctl.io/nodegroup-name: "managed-ng-automation" 
-
-    
       containers:
         - name: selenium-node-chrome
           image: selenium/node-chrome:3.141.59-20210929
@@ -39,3 +37,10 @@ spec:
              value: "4443"
            - name: JAVA_OPTS
              value: "-Dwebdriver.chrome.whitelistedIps="
+          volumeMounts:
+            - name: automation-pvc
+              mountPath: /usr/share/jitsi-meet-torture/resources
+      volumes:
+        - name: automation-pvc
+          persistentVolumeClaim:
+          claimName: asset-pvc
