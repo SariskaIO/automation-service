@@ -2,6 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: asset-pvc
+  namespace: automation
 spec:
   accessModes:
     - ReadOnlyMany

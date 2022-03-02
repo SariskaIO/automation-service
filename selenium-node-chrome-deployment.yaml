@@ -4,7 +4,7 @@ metadata:
   name: selenium-node-chrome-rep
   namespace: automation
 spec:  
-  replicas: 0
+  replicas: 1
   selector:
     app: selenium-node-chrome
   template:
@@ -43,4 +43,4 @@ spec:
       volumes:
         - name: automation-pvc
           persistentVolumeClaim:
-          claimName: asset-pvc
+            claimName: asset-pvc

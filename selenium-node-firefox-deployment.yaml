@@ -39,4 +39,4 @@ spec:
       volumes:
         - name: automation-pvc
           persistentVolumeClaim:
-          claimName: asset-pvc
+            claimName: asset-pvc
