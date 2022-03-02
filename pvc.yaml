@@ -8,4 +8,4 @@ spec:
     - ReadOnlyMany
   resources:
     requests:
-      storage: 2Gi
+      storage: 1Gi
