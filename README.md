@@ -30,16 +30,15 @@ Hub is a server that accepts the access requests from the WebDriver client, rout
 
 Node is a remote device that consists of a native OS and a remote WebDriver. It receives requests from the hub in the form of JSON test commands and executes them using WebDriver
 
+
 ### To access selenium hub console
- http:<NODE_IP>:30001/hub/console
+
+ http:http://13.126.68.169/:30001/hub/console
 
   
-### How To Run Test:
+## How To Start:
 
-
-ssh to torture
-
-### Using Kubect
+### 1. ssh to torture pod:
 
 ```
 
@@ -47,8 +46,7 @@ kubectl exec -it torture -n automation -- /bin/sh
 
 ```
 
-
-and then run test with desired config  
+### 2.run test with desired config  
   
 ```
  mvn -f pom.xml \
