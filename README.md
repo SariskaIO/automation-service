@@ -43,7 +43,7 @@ ssh to torture
 
 ```
 
-kubectl exec -it torture-f8b758ffc-nnchc -n automation -- /bin/sh```  
+kubectl exec -it torture-f8b758ffc-nnchc -n automation -- /bin/sh
 
 ```
 
