@@ -1,3 +1,5 @@
+## Introduction 
+
 ### Selenium on Kubernetes
 
 Selenium Grid allows the execution of WebDriver scripts on remote machines (virtual or real) by routing commands sent by the client to remote browser instances. It aims to provide an easy way to run tests in parallel on multiple machines. This example shows you how to deploy Selenium to Kubernetes in a scalable fashion.
