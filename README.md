@@ -16,9 +16,7 @@ Torture---------->Selenium Hub----------->|-----------> Selenium Node3------>|--
                                           |-----------> Selenium Node N----->|
                                           
 ```                                          
-                                          
-                                          
-                                     
+                                             
 
 ### Jitsi meet torture  
 
@@ -44,14 +42,8 @@ ssh to torture
 ### Using Kubect
 
 ```
-kubectl exec -it <pod-name> -n <namespace> -- bash
-```  
-or
 
-### Direct
-
-```
- ssh pod_ip 
+kubectl exec -it torture-f8b758ffc-nnchc -n automation -- /bin/sh```  
 
 ```
 
