@@ -17,10 +17,5 @@ RUN apt install maven -y
 
 # Clone the jitsi-torture-repository
 # RUN git clone https://github.com/jitsi/jitsi-meet-torture
+
 RUN git clone https://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@github.com/SariskaIO/jitsi-meet-torture.git
-
-COPY ./init.sh /usr/local/bin/
-
-RUN chmod +x /usr/local/bin/init.sh
-
-CMD ["/usr/local/bin/init.sh"]

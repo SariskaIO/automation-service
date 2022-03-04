@@ -1,9 +1,9 @@
 .PHONY: help
 
 AWS_ACCOUNT_ID = 718762496685
-APP_NAME = automation-service
+APP_NAME = torture
 REGION = ap-south-1
-NAMESPACE = firefox
+NAMESPACE = automation
 
 
 build-release:
@@ -19,4 +19,3 @@ dev-server:
 	docker run -it ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${NAMESPACE}/$(APP_NAME):latest
 
 deploy: build-release push-release deploy-release
-

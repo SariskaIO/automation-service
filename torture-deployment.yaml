@@ -7,11 +7,6 @@ spec:
   selector:
     matchLabels:
       app: torture
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-     maxSurge: 0
-     maxUnavailable: 1
   template:
     metadata:
       labels:
@@ -21,7 +16,7 @@ spec:
         alpha.eksctl.io/nodegroup-name: "managed-ng-automation" 
       containers:
       - name: torture
-        image: 718762496685.dkr.ecr.ap-south-1.amazonaws.com/sariska/automation-service:latest 
+        image: 718762496685.dkr.ecr.ap-south-1.amazonaws.com/automation/torture:latest
         resources:
           limits:
             memory: "2000Mi"
