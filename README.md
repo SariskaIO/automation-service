@@ -56,7 +56,7 @@
   -Dorg.jitsi.malleus.max_disrupted_bridges_pct=0 \
   -Dorg.jitsi.malleus.join_delay=200 \
   -Dorg.jitsi.malleus.room_name_prefix=loadtest \
-  -Dorg.jitsi.malleus.input_video_file="fakeVideoStream.y4m" \
+  -Dorg.jitsi.malleus.input_video_file="resources/fakeVideoStream.y4m" \
   -Dorg.jitsi.malleus.regions="" \
   -Dremote.address="http://selenium-srv.automation.svc.cluster.local:30001/wd/hub" \
   -Djitsi-meet.tests.toRun=MalleusJitsificus \
