@@ -66,7 +66,7 @@ and then run test with desired config
 -Djitsi-meet.tests.toRun=MalleusJitsificus \
 -Dwdm.gitHubTokenName=jitsi-jenkins \
 -Dremote.resource.path='/usr/share/jitsi-meet-torture' \
--Djitsi-meet.instance.url="https://meet.dev.sariska.io" \
+-Djitsi-meet.instance.url="http://selenium-srv.automation.svc.cluster.local:30001" \
 -Djitsi-meet.isRemote=true \
 -Dchrome.disable.nosanbox=true \
 test
