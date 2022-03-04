@@ -62,11 +62,11 @@ and then run test with desired config
 -Dorg.jitsi.malleus.join_delay=200 \
 -Dorg.jitsi.malleus.room_name_prefix=loadtest \
 -Dorg.jitsi.malleus.regions="" \
--Dremote.address="http://localhost:4444/wd/hub" \
+-Dremote.address="http://selenium-srv.automation.svc.cluster.local:30001" \
 -Djitsi-meet.tests.toRun=MalleusJitsificus \
 -Dwdm.gitHubTokenName=jitsi-jenkins \
 -Dremote.resource.path='/usr/share/jitsi-meet-torture' \
--Djitsi-meet.instance.url="http://selenium-srv.automation.svc.cluster.local:30001" \
+-Djitsi-meet.instance.url="https://meet.dev.sariska.io" \
 -Djitsi-meet.isRemote=true \
 -Dchrome.disable.nosanbox=true \
 test
