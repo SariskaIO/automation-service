@@ -38,7 +38,7 @@ Node is a remote device that consists of a native OS and a remote WebDriver. It 
   
 ## How To Start:
 
-### 1. ssh to torture pod:
+### 1. SSH to torture pod:
 
 ```
 
@@ -46,7 +46,7 @@ kubectl exec -it torture -n automation -- /bin/sh
 
 ```
 
-### 2.run test with desired config  
+### 2. Run test with desired config  
   
 ```
  mvn -f pom.xml \
