@@ -22,7 +22,7 @@
 
   ### Jitsi meet torture  
 
-  meet meet torture contains all unit tests written in java selenium as well resources to replicate fake videos.
+  meet meet torture contains all unit tests written in java selenium as well resources to replicate fake audio/video.
 
   ### Selenium Hub
 
